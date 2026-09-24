@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "title": "Space Agency — Exploring Beyond Boundaries",
+    "description": "Exploring space through science, engineering and innovation."
+  },
+  "loading": {
+    "title": "SPACE AGENCY",
+    "subtitle": "INITIALIZING SYSTEM"
+  },
+  "nav": {
+    "home": "Home",
+    "missions": "Missions",
+    "discover": "Discover",
+    "research": "Research",
+    "technology": "Technology",
+    "news": "News",
+    "about": "About",
+    "contact": "Contact",
+    "explore": "Explore"
+  },
+  "hero": {
+    "eyebrow": "EXPANDING THE FRONTIER",
+    "headline1": "WE EXPLORE",
+    "headline2": "WHAT'S NEXT.",
+    "description": "Advancing space science, engineering and exploration to expand humanity's understanding of the universe.",
+    "cta1": "Explore Missions",
+    "cta2": "Discover Our Work",
+    "scroll": "SCROLL TO EXPLORE"
+  },
+  "missionControl": {
+    "title": "MISSION CONTROL",
+    "activeMissions": "ACTIVE MISSIONS",
+    "satellitesInOrbit": "SATELLITES IN ORBIT",
+    "distanceTraveled": "DISTANCE TRAVELED",
+    "dataCollected": "DATA COLLECTED",
+    "activeMissionsValue": "07",
+    "satellitesValue": "24",
+    "distanceValue": "18.4B KM",
+    "dataValue": "4.8 PB",
+    "missionLabel": "MISSION",
+    "statusLabel": "STATUS",
+    "objectiveLabel": "OBJECTIVE",
+    "distanceLabel": "DISTANCE",
+    "missionName": "ARES-07",
+    "missionStatus": "IN ORBIT",
+    "missionObjective": "Deep-space observation",
+    "missionDistance": "1.84 AU",
+    "orbitalClass": "ORBITAL CLASS",
+    "orbitalClassValue": "L2",
+    "dataStatus": "DATA",
+    "dataStatusValue": "LIVE",
+    "statusNominal": "STATUS: NOMINAL"
+  },
+  "missions": {
+    "title": "MISSIONS",
+    "subtitle": "Exploring worlds beyond our own.",
+    "viewMission": "View Mission",
+    "statusCompleted": "COMPLETED",
+    "statusActive": "ACTIVE",
+    "statusPlanned": "PLANNED",
+    "items": {
+      "orion": {
+        "id": "MISSION 01",
+        "name": "ORION-01",
+        "destination": "Deep Space",
+        "year": "2022",
+        "description": "Deep-space observation mission utilizing advanced optical and infrared arrays to map uncharted regions beyond the heliosphere.",
+        "status": "COMPLETED"
+      },
+      "luna": {
+        "id": "MISSION 02",
+        "name": "LUNA-X",
+        "destination": "The Moon",
+        "year": "2024",
+        "description": "Comprehensive lunar exploration program conducting geological surveys and resource analysis of the lunar south pole.",
+        "status": "ACTIVE"
+      },
+      "aurora": {
+        "id": "MISSION 03",
+        "name": "AURORA",
+        "destination": "Earth Orbit",
+        "year": "2024",
+        "description": "Earth observation and climate research satellite constellation monitoring atmospheric composition and ocean currents.",
+        "status": "ACTIVE"
+      },
+      "titan": {
+        "id": "MISSION 04",
+        "name": "TITAN",
+        "destination": "Outer System",
+        "year": "2026",
+        "description": "Long-term outer solar system exploration concept targeting the moons of Saturn for signs of prebiotic chemistry.",
+        "status": "PLANNED"
+      }
+    }
+  },
+  "solarSystem": {
+    "title": "EXPLORE THE SOLAR SYSTEM",
+    "subtitle": "Navigate the planets of our cosmic neighborhood.",
+    "distanceFromSun": "Distance from Sun",
+    "diameter": "Diameter",
+    "gravity": "Gravity",
+    "moons": "Moons",
+    "atmosphere": "Atmosphere",
+    "missions": "Agency Missions",
+    "selectPlanet": "Select a planet to explore"
+  },
+  "technology": {
+    "title": "ENGINEERING THE IMPOSSIBLE",
+    "subtitle": "Pioneering technologies that redefine what humanity can achieve beyond Earth.",
+    "items": {
+      "propulsion": {
+        "title": "Propulsion Systems",
+        "description": "Next-generation ion drives and plasma propulsion enabling faster, more efficient deep-space travel."
+      },
+      "robotics": {
+        "title": "Advanced Robotics",
+        "description": "Autonomous robotic systems designed for extraterrestrial surface exploration and in-space assembly."
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Machine learning systems for real-time data analysis, mission planning, and autonomous decision-making."
+      },
+      "satellite": {
+        "title": "Satellite Systems",
+        "description": "Cutting-edge satellite platforms for Earth observation, communication, and deep-space relay networks."
+      },
+      "communication": {
+        "title": "Deep Space Communication",
+        "description": "Laser-optical and quantum communication systems maintaining contact across billions of kilometers."
+      },
+      "navigation": {
+        "title": "Autonomous Navigation",
+        "description": "Self-navigating spacecraft systems using star-tracking and AI-powered trajectory optimization."
+      }
+    }
+  },
+  "research": {
+    "title": "RESEARCH & DISCOVERY",
+    "subtitle": "Advancing the boundaries of human knowledge through rigorous scientific investigation.",
+    "learnMore": "Learn More",
+    "items": {
+      "astrophysics": {
+        "title": "Astrophysics",
+        "description": "Investigating the fundamental laws governing stars, galaxies, dark matter and the evolution of the cosmos."
+      },
+      "planetary": {
+        "title": "Planetary Science",
+        "description": "Studying the composition, geology and atmospheres of planets and moons across the solar system."
+      },
+      "earth": {
+        "title": "Earth Observation",
+        "description": "Monitoring our planet's climate, oceans and atmosphere from orbit to understand environmental change."
+      },
+      "biology": {
+        "title": "Space Biology",
+        "description": "Researching the effects of microgravity on biological systems and the potential for life beyond Earth."
+      },
+      "chemistry": {
+        "title": "Astrochemistry",
+        "description": "Analyzing the chemical processes occurring in interstellar space that may lead to the building blocks of life."
+      },
+      "autonomous": {
+        "title": "AI & Autonomous Systems",
+        "description": "Developing intelligent systems capable of independent operation in the extreme environments of space."
+      }
+    }
+  },
+  "spacecraft": {
+    "title": "BUILT FOR THE UNKNOWN",
+    "subtitle": "Our next-generation exploration vehicle, engineered for the deepest reaches of space.",
+    "propulsion": "PROPULSION",
+    "propulsionValue": "ION DRIVE",
+    "power": "POWER",
+    "powerValue": "SOLAR ARRAY",
+    "communication": "COMMUNICATION",
+    "communicationValue": "DEEP SPACE LINK",
+    "navigation": "NAVIGATION",
+    "navigationValue": "STAR TRACKER",
+    "shielding": "SHIELDING",
+    "shieldingValue": "COMPOSITE",
+    "payload": "PAYLOAD",
+    "payloadValue": "2,400 KG"
+  },
+  "earth": {
+    "title1": "OUR PLANET.",
+    "title2": "OUR RESPONSIBILITY.",
+    "description": "Satellite observation enables us to better understand climate, oceans, atmosphere and the changing planet. Our constellation of Earth-monitoring satellites provides critical data for environmental science and climate policy.",
+    "cta": "EXPLORE EARTH DATA",
+    "coordinates": "34°12'08\"N  118°14'37\"W",
+    "altitude": "ALTITUDE: 408 KM",
+    "orbit": "LOW EARTH ORBIT"
+  },
+  "news": {
+    "title": "FROM THE AGENCY",
+    "subtitle": "Latest developments, discoveries, and announcements from our missions and programs.",
+    "readMore": "Read More",
+    "items": {
+      "telescope": {
+        "date": "Sep 15, 2026",
+        "category": "Technology",
+        "title": "New Deep-Space Telescope Completes Calibration",
+        "description": "The agency's next-generation deep-space telescope has successfully completed its calibration phase, delivering images of unprecedented clarity from the L2 Lagrange point."
+      },
+      "lunar": {
+        "date": "Sep 08, 2026",
+        "category": "Exploration",
+        "title": "Agency Announces Lunar Exploration Program",
+        "description": "A comprehensive new lunar exploration initiative will deploy autonomous rovers and establish a permanent research station at the lunar south pole by 2028."
+      },
+      "navigation": {
+        "date": "Aug 28, 2026",
+        "category": "Research",
+        "title": "New Autonomous Navigation System Tested",
+        "description": "The autonomous navigation system for deep-space missions passed critical tests, demonstrating the ability to independently navigate through complex gravitational fields."
+      },
+      "satellite": {
+        "date": "Aug 20, 2026",
+        "category": "Earth Science",
+        "title": "Satellite Captures New Atmospheric Data",
+        "description": "The AURORA satellite constellation has captured detailed new data on upper atmospheric dynamics, providing insights into climate change acceleration patterns."
+      }
+    }
+  },
+  "impact": {
+    "missions": "MISSIONS",
+    "missionsValue": "25+",
+    "years": "YEARS OF EXPLORATION",
+    "yearsValue": "18",
+    "spacecraft": "SPACECRAFT",
+    "spacecraftValue": "42",
+    "research": "RESEARCH PROJECTS",
+    "researchValue": "120+"
+  },
+  "timeline": {
+    "title": "OUR JOURNEY",
+    "subtitle": "Key milestones in our ongoing quest to explore the cosmos.",
+    "items": {
+      "2008": {
+        "year": "2008",
+        "title": "Agency Founded",
+        "description": "Established with a mandate to advance space science, engineering and exploration for the benefit of all humanity."
+      },
+      "2012": {
+        "year": "2012",
+        "title": "First Satellite Launched",
+        "description": "Successfully placed our first Earth observation satellite into low orbit, beginning our operational space program."
+      },
+      "2016": {
+        "year": "2016",
+        "title": "Deep-Space Program Begins",
+        "description": "Initiated the deep-space research program with development of advanced propulsion and communication systems."
+      },
+      "2020": {
+        "year": "2020",
+        "title": "Autonomous Spacecraft",
+        "description": "Introduced AI-powered autonomous spacecraft technology, enabling missions beyond the range of real-time communication."
+      },
+      "2024": {
+        "year": "2024",
+        "title": "Lunar Exploration Begins",
+        "description": "Launched the LUNA-X mission, deploying rovers and instruments to explore the lunar south pole region."
+      },
+      "2026": {
+        "year": "2026",
+        "title": "Next Generation",
+        "description": "Beginning our most ambitious exploration program yet, with missions targeting the outer solar system and beyond."
+      }
+    }
+  },
+  "cta": {
+    "headline1": "THE UNIVERSE",
+    "headline2": "IS WAITING.",
+    "description": "Join us as we explore the unknown and build the technologies that will define tomorrow.",
+    "cta1": "Explore Missions",
+    "cta2": "Contact Agency"
+  },
+  "footer": {
+    "description": "Advancing space science, engineering and exploration to expand humanity's understanding of the universe.",
+    "explore": "Explore",
+    "social": "Social",
+    "contact": "Contact",
+    "email": "contact@spaceagency.org",
+    "copyright": "© 2026 Space Agency",
+    "tagline": "Exploring beyond boundaries."
+  }
+}
