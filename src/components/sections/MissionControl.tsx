@@ -45,17 +45,17 @@ export default function MissionControl() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-3">
             <Activity size={16} className="text-space-blue" />
             <span className="technical-label text-space-blue">{t('statusNominal')}</span>
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold">{t('title')}</h2>
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold">{t('title')}</h2>
         </motion.div>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 md:mb-14">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -63,10 +63,10 @@ export default function MissionControl() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-subtle p-6"
+              className="glass-subtle p-4 sm:p-6 rounded-xl"
             >
-              <p className="technical-label text-space-gray mb-2 text-[0.6rem]">{stat.label}</p>
-              <p className="font-heading text-2xl md:text-3xl font-bold text-space-white" style={{ animation: 'counter-pulse 4s ease-in-out infinite' }}>
+              <p className="technical-label text-space-gray mb-1.5 text-[0.6rem] truncate">{stat.label}</p>
+              <p className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-space-white" style={{ animation: 'counter-pulse 4s ease-in-out infinite' }}>
                 {stat.value !== null ? (
                   <AnimatedCounter end={stat.value} />
                 ) : (
@@ -83,7 +83,7 @@ export default function MissionControl() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="glass-subtle p-8 md:p-12 relative overflow-hidden"
+          className="glass-subtle p-5 sm:p-8 md:p-12 rounded-2xl relative overflow-hidden"
         >
           {/* Decorative orbital */}
           <div className="absolute top-0 end-0 w-80 h-80 pointer-events-none opacity-20" aria-hidden="true">
@@ -96,43 +96,43 @@ export default function MissionControl() {
             </svg>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 relative">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 relative">
             <div>
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4 md:mb-6">
                 <Satellite size={16} className="text-space-blue" />
                 <span className="technical-label text-space-blue">{t('missionLabel')}</span>
               </div>
-              <h3 className="font-heading text-4xl md:text-5xl font-bold mb-6">{t('missionName')}</h3>
+              <h3 className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">{t('missionName')}</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="technical-label text-space-gray w-24">{t('statusLabel')}</span>
+                  <span className="technical-label text-space-gray w-24 shrink-0">{t('statusLabel')}</span>
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                     <span className="text-green-400 text-sm font-medium">{t('missionStatus')}</span>
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="technical-label text-space-gray w-24">{t('objectiveLabel')}</span>
+                  <span className="technical-label text-space-gray w-24 shrink-0">{t('objectiveLabel')}</span>
                   <span className="text-space-white text-sm">{t('missionObjective')}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="technical-label text-space-gray w-24">{t('distanceLabel')}</span>
+                  <span className="technical-label text-space-gray w-24 shrink-0">{t('distanceLabel')}</span>
                   <span className="text-space-white text-sm font-mono">{t('missionDistance')}</span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-4">
-              <div className="glass-subtle p-4 flex items-center justify-between">
-                <span className="technical-label text-space-gray">{t('orbitalClass')}</span>
-                <span className="font-heading text-lg font-bold text-space-blue">{t('orbitalClassValue')}</span>
+            <div className="flex flex-col justify-center gap-3 sm:gap-4 mt-2 md:mt-0">
+              <div className="glass-subtle p-3.5 sm:p-4 rounded-xl flex items-center justify-between">
+                <span className="technical-label text-space-gray text-[0.65rem] sm:text-xs">{t('orbitalClass')}</span>
+                <span className="font-heading text-base sm:text-lg font-bold text-space-blue">{t('orbitalClassValue')}</span>
               </div>
-              <div className="glass-subtle p-4 flex items-center justify-between">
-                <span className="technical-label text-space-gray">{t('dataStatus')}</span>
+              <div className="glass-subtle p-3.5 sm:p-4 rounded-xl flex items-center justify-between">
+                <span className="technical-label text-space-gray text-[0.65rem] sm:text-xs">{t('dataStatus')}</span>
                 <span className="flex items-center gap-2">
                   <Radio size={12} className="text-green-400 animate-pulse" />
-                  <span className="font-heading text-lg font-bold text-green-400">{t('dataStatusValue')}</span>
+                  <span className="font-heading text-base sm:text-lg font-bold text-green-400">{t('dataStatusValue')}</span>
                 </span>
               </div>
             </div>

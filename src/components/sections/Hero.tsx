@@ -16,15 +16,16 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 md:py-0">
       {/* Planet */}
-      <div className="absolute pointer-events-none" style={{ bottom: '-20%', right: isRtl ? 'auto' : '-10%', left: isRtl ? '-10%' : 'auto' }}>
+      <div className="absolute pointer-events-none w-[360px] h-[360px] md:w-[800px] md:h-[800px]" style={{ bottom: '-15%', right: isRtl ? 'auto' : '-10%', left: isRtl ? '-10%' : 'auto' }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
+          className="w-full h-full"
         >
-          <svg width="800" height="800" viewBox="0 0 800 800" className="opacity-20 md:opacity-30" aria-hidden="true">
+          <svg viewBox="0 0 800 800" className="w-full h-full opacity-20 md:opacity-30" aria-hidden="true">
             <defs>
               <radialGradient id="planet-grad" cx="40%" cy="40%">
                 <stop offset="0%" stopColor="#1a3a6a" />
@@ -54,13 +55,13 @@ export default function Hero() {
 
       {/* Orbital line */}
       <motion.div
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none w-[320px] h-[320px] md:w-[600px] md:h-[600px]"
         style={{ top: '15%', left: isRtl ? '-5%' : 'auto', right: isRtl ? 'auto' : '-5%' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1 }}
       >
-        <svg width="600" height="600" viewBox="0 0 600 600" className="opacity-30" aria-hidden="true">
+        <svg viewBox="0 0 600 600" className="w-full h-full opacity-30" aria-hidden="true">
           <motion.ellipse
             cx="300" cy="300" rx="280" ry="120"
             fill="none"
@@ -90,10 +91,10 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center md:text-start" dir={isRtl ? 'rtl' : 'ltr'}>
+      <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 text-center md:text-start" dir={isRtl ? 'rtl' : 'ltr'}>
         {/* Technical coordinates */}
         <motion.div
-          className="technical-label mb-4 text-space-gray/60"
+          className="technical-label mb-3 text-space-gray/60 text-[0.6rem] sm:text-[0.65rem]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -103,7 +104,7 @@ export default function Hero() {
 
         {/* Eyebrow */}
         <motion.p
-          className="technical-label text-space-blue mb-6 tracking-[0.2em]"
+          className="technical-label text-space-blue mb-4 md:mb-6 tracking-[0.2em] text-xs"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
@@ -113,7 +114,7 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.95] mb-8"
+          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[1] sm:leading-[0.95] mb-6 md:mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
@@ -138,7 +139,7 @@ export default function Hero() {
 
         {/* Description */}
         <motion.p
-          className="text-space-gray text-lg md:text-xl max-w-xl leading-relaxed mb-10"
+          className="text-space-gray text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-8 md:mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.8 }}
@@ -149,21 +150,21 @@ export default function Hero() {
 
         {/* Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3.1 }}
         >
           <button
             onClick={() => scrollTo('missions')}
-            className="btn-primary group"
+            className="btn-primary group justify-center"
           >
             {t('cta1')}
             <ArrowIcon size={16} className="transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
           </button>
           <button
             onClick={() => scrollTo('research')}
-            className="btn-secondary group"
+            className="btn-secondary group justify-center"
           >
             {t('cta2')}
             <ArrowIcon size={16} className="transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
