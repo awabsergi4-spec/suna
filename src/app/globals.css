@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,13 +6,16 @@
   --color-space-deep: #0A1128;
   --color-space-midnight: #0F1B3D;
   --color-space-violet: #1A1040;
-  --color-space-blue: #0066FF;
-  --color-space-electric: #3B82F6;
-  --color-space-cyan: #06B6D4;
+  /* Brand palette — taken from the SUNACS logo */
+  --color-space-blue: #6B6FD4;
+  --color-space-electric: #8E91EC;
+  --color-space-cyan: #F4978E;
+  --color-brand-indigo: #6B6FD4;
+  --color-brand-coral: #F4978E;
   --color-space-white: #F0F4FF;
   --color-space-gray: #8892A8;
   --color-space-border: rgba(255, 255, 255, 0.06);
-  --color-space-glow: rgba(59, 130, 246, 0.15);
+  --color-space-glow: rgba(107, 111, 212, 0.15);
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
@@ -26,11 +28,41 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@supports (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
 body {
   background-color: var(--color-space-black);
   color: var(--color-space-white);
   font-family: var(--font-sans);
-  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hide scrollbars on horizontal pickers while keeping them scrollable */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Anchored sections should not hide under the fixed navbar */
+section[id] {
+  scroll-margin-top: 4.5rem;
 }
 
 [dir="rtl"] body {
@@ -47,29 +79,49 @@ body {
 }
 
 ::selection {
-  background-color: rgba(59, 130, 246, 0.3);
+  background-color: rgba(107, 111, 212, 0.3);
   color: white;
 }
 
 /* ========== CUSTOM CURSOR ========== */
-.custom-cursor {
-  width: 8px;
-  height: 8px;
-  background: var(--color-space-blue);
-  border-radius: 50%;
+.cursor-dot,
+.cursor-ring {
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
+  border-radius: 9999px;
   z-index: 9999;
-  transition: width 0.2s, height 0.2s, background 0.2s, opacity 0.2s;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.25s ease, width 0.25s ease, height 0.25s ease, margin 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.custom-cursor.expanded {
-  width: 40px;
-  height: 40px;
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.5);
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--color-brand-coral);
+}
+
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 1px solid rgba(142, 145, 236, 0.5);
+}
+
+.cursor-visible .cursor-dot,
+.cursor-visible .cursor-ring {
+  opacity: 1;
+}
+
+.cursor-hover .cursor-ring {
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  background: rgba(107, 111, 212, 0.1);
+  border-color: rgba(244, 151, 142, 0.6);
 }
 
 /* ========== SCROLLBAR ========== */
@@ -82,12 +134,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(107, 111, 212, 0.3);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.5);
+  background: rgba(107, 111, 212, 0.5);
 }
 
 /* ========== STAR TWINKLE ========== */
@@ -164,8 +216,8 @@ body {
 }
 
 @keyframes counter-pulse {
-  0%, 100% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-  50% { text-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  0%, 100% { text-shadow: 0 0 20px rgba(107, 111, 212, 0.3); }
+  50% { text-shadow: 0 0 40px rgba(107, 111, 212, 0.6); }
 }
 
 @keyframes gradient-shift {
@@ -203,37 +255,52 @@ body {
 
 /* ========== SECTION SPACING ========== */
 .section-padding {
-  padding: 3.5rem 1.25rem;
+  padding: 3.5rem 1rem;
 }
 
 @media (min-width: 640px) {
   .section-padding {
-    padding: 5rem 2rem;
+    padding: 4.5rem 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 7rem 3rem;
+    padding: 6rem 2.5rem;
   }
 }
 
 @media (min-width: 1280px) {
   .section-padding {
-    padding: 9rem 4rem;
+    padding: 7.5rem 4rem;
   }
 }
 
 /* ========== GLASS EFFECT (subtle) ========== */
 .glass-subtle {
-  background: rgba(10, 17, 40, 0.6);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(160deg, rgba(16, 22, 48, 0.82), rgba(8, 12, 28, 0.82));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Shared card surface: solid enough to read, no backdrop-filter (cheap to paint) */
+.card-surface {
+  background: linear-gradient(160deg, rgba(16, 22, 48, 0.78), rgba(8, 12, 28, 0.78));
   border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+  .card-surface:hover {
+    border-color: rgba(142, 145, 236, 0.35);
+    box-shadow: 0 18px 40px -20px rgba(107, 111, 212, 0.45);
+  }
 }
 
 /* ========== GRADIENT TEXT ========== */
 .gradient-text {
-  background: linear-gradient(135deg, #F0F4FF 0%, #3B82F6 50%, #06B6D4 100%);
+  background: linear-gradient(120deg, #F0F4FF 0%, #A5A8F5 45%, #F4978E 100%);
+  background-size: 200% 100%;
+  animation: gradient-shift 8s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -242,15 +309,15 @@ body {
 /* ========== GRID OVERLAY ========== */
 .grid-overlay {
   background-image: 
-    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(107, 111, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 111, 212, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 /* ========== ORBITAL PATH ========== */
 .orbital-path {
   fill: none;
-  stroke: rgba(59, 130, 246, 0.15);
+  stroke: rgba(107, 111, 212, 0.15);
   stroke-width: 1;
 }
 
@@ -260,9 +327,10 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  background: var(--color-space-blue);
+  background: linear-gradient(135deg, #6B6FD4 0%, #8B6FD4 100%);
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+  border-radius: 9999px;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
@@ -284,7 +352,7 @@ body {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 30px rgba(107, 111, 212, 0.4);
   transform: translateY(-1px);
 }
 
@@ -299,13 +367,14 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  border-color: rgba(59, 130, 246, 0.5);
-  background: rgba(59, 130, 246, 0.05);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  border-color: rgba(107, 111, 212, 0.5);
+  background: rgba(107, 111, 212, 0.05);
+  box-shadow: 0 0 20px rgba(107, 111, 212, 0.15);
 }
 
 /* ========== FOCUS STYLES ========== */
@@ -350,7 +419,6 @@ button:focus-visible {
 .nebula {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
   opacity: 0.03;
   pointer-events: none;
 }
@@ -379,4 +447,26 @@ button:focus-visible {
   height: 100%;
   background: var(--color-space-blue);
   transition: width 0.3s ease;
+}
+
+/* ========== LOGO ========== */
+.brand-logo {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ========== FLOAT (CSS, GPU friendly) ========== */
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ========== MOBILE TUNING ========== */
+@media (max-width: 639px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.8rem 1.5rem;
+  }
 }

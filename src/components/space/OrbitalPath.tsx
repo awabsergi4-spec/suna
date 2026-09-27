@@ -40,14 +40,14 @@ export default function OrbitalPath({
         rx={rx}
         ry={ry}
         fill="none"
-        stroke={`rgba(59, 130, 246, ${strokeOpacity})`}
+        stroke={`rgba(107,111,212, ${strokeOpacity})`}
         strokeWidth="1"
         strokeDasharray="4 6"
       />
       {/* Animated dot */}
       <motion.circle
         r={dotSize}
-        fill="rgba(59, 130, 246, 0.8)"
+        fill="rgba(107,111,212, 0.8)"
         initial={{ offsetDistance: '0%' }}
         animate={{ offsetDistance: '100%' }}
         transition={{

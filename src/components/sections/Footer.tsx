@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+import { MapPin, Mail } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -14,18 +14,16 @@ export default function Footer() {
 
   const navLinks = [
     { label: tNav('home'), id: 'hero' },
-    { label: tNav('missions'), id: 'missions' },
+    { label: tNav('about'), id: 'about' },
+    { label: tNav('policies'), id: 'policies' },
+    { label: tNav('program'), id: 'program' },
+    { label: tNav('projects'), id: 'projects' },
+    { label: tNav('partners'), id: 'partners' },
     { label: tNav('discover'), id: 'solar-system' },
-    { label: tNav('research'), id: 'research' },
-    { label: tNav('technology'), id: 'technology' },
-    { label: tNav('news'), id: 'news' },
-    { label: tNav('about'), id: 'timeline' },
   ];
 
-  const socials = ['X / Twitter', 'LinkedIn', 'Instagram', 'YouTube'];
-
   return (
-    <footer className="relative pt-20 pb-12 border-t border-white/5 bg-space-black overflow-hidden">
+    <footer className="relative z-10 pt-14 sm:pt-20 pb-10 sm:pb-12 border-t border-white/5 bg-space-black overflow-hidden">
       {/* Subtle Animated Orbital Line Behind Footer */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[300px] pointer-events-none opacity-20">
         <svg viewBox="0 0 1400 300" className="w-full h-full">
@@ -35,43 +33,42 @@ export default function Footer() {
             rx="650"
             ry="180"
             fill="none"
-            stroke="rgba(59,130,246,0.3)"
+            stroke="rgba(107,111,212,0.3)"
             strokeWidth="1"
             strokeDasharray="4 8"
           />
         </svg>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/5">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-10 lg:gap-12 pb-12 sm:pb-16 border-b border-white/5">
           {/* Brand Info */}
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 relative">
-                <svg viewBox="0 0 32 32" className="w-8 h-8" aria-hidden="true">
-                  <circle cx="16" cy="16" r="14" fill="none" stroke="rgba(59,130,246,0.6)" strokeWidth="1.5" />
-                  <circle cx="16" cy="16" r="3" fill="#3B82F6" />
-                  <ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="rgba(59,130,246,0.3)" strokeWidth="0.8" transform="rotate(-25 16 16)" />
-                </svg>
-              </div>
-              <span className="font-heading text-base font-bold tracking-[0.2em] uppercase text-space-white">
-                {locale === 'ar' ? 'وكالة الفضاء' : 'SPACE AGENCY'}
-              </span>
+          <div className="col-span-2 lg:col-span-5">
+            <div className="h-16 sm:h-20 mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-light.webp"
+                alt={locale === 'ar' ? 'اللجنة الوطنية السودانية للفضاء' : 'Sudanese National Committee for Space'}
+                width={720}
+                height={363}
+                loading="lazy"
+                className="brand-logo"
+              />
             </div>
             <p className="text-space-gray text-sm leading-relaxed max-w-sm mb-6">
               {t('description')}
             </p>
             <div className="technical-label text-[0.65rem] text-space-gray/60">
-              COORDINATES: 34°12&apos;08&quot;N 118°14&apos;37&quot;W // STATION L2
+              {t('location')}
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className="lg:col-span-3">
-            <h4 className="technical-label text-space-white font-semibold text-xs tracking-widest mb-6">
+          <div className="col-span-2 lg:col-span-3">
+            <h4 className="technical-label text-space-white font-semibold text-xs tracking-widest mb-4 sm:mb-6">
               {t('explore')}
             </h4>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-3">
               {navLinks.map((link, idx) => (
                 <li key={idx}>
                   <button
@@ -85,44 +82,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Links */}
-          <div className="lg:col-span-2">
-            <h4 className="technical-label text-space-white font-semibold text-xs tracking-widest mb-6">
-              {t('social')}
-            </h4>
-            <ul className="space-y-3">
-              {socials.map((social, idx) => (
-                <li key={idx}>
-                  <a
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
-                    className="text-sm text-space-gray hover:text-space-white transition-colors"
-                  >
-                    {social}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact Details */}
-          <div className="lg:col-span-2">
-            <h4 className="technical-label text-space-white font-semibold text-xs tracking-widest mb-6">
+          <div className="col-span-2 lg:col-span-4">
+            <h4 className="technical-label text-space-white font-semibold text-xs tracking-widest mb-4 sm:mb-6">
               {t('contact')}
             </h4>
-            <p className="text-sm text-space-gray mb-2">{t('email')}</p>
-            <p className="text-sm text-space-gray">GLOBAL COMMUNICATIONS</p>
-            <div className="mt-4">
-              <span className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/30 border border-emerald-800/30 px-2.5 py-1 rounded">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                SYSTEM ONLINE
-              </span>
-            </div>
+            <ul className="space-y-3 text-sm text-space-gray">
+              <li className="flex items-start gap-2.5">
+                <MapPin size={15} className="text-space-cyan shrink-0 mt-0.5" />
+                <span>
+                  {t('address')}
+                  <br />
+                  {t('pobox')}
+                </span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Mail size={15} className="text-space-cyan shrink-0" />
+                <a href={`mailto:${t('email')}`} className="hover:text-space-white transition-colors" dir="ltr">
+                  {t('email')}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-space-gray/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-space-gray/60 text-center">
           <div>{t('copyright')}</div>
           <div className="tracking-widest uppercase">{t('tagline')}</div>
         </div>

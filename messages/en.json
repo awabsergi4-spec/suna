@@ -1,97 +1,275 @@
 {
   "metadata": {
-    "title": "Space Agency — Exploring Beyond Boundaries",
-    "description": "Exploring space through science, engineering and innovation."
-  },
-  "loading": {
-    "title": "SPACE AGENCY",
-    "subtitle": "INITIALIZING SYSTEM"
+    "title": "SUNACS — Sudanese National Committee for Space",
+    "description": "The Sudanese National Committee for Space (SUNACS) leads Sudan's national space policy, the SuSat-1 remote sensing satellite, the national ground segment and international space partnerships."
   },
   "nav": {
     "home": "Home",
-    "missions": "Missions",
-    "discover": "Discover",
-    "research": "Research",
-    "technology": "Technology",
-    "news": "News",
     "about": "About",
+    "policies": "Policies",
+    "program": "Program",
+    "projects": "Projects",
+    "partners": "Partners",
+    "discover": "Solar System",
     "contact": "Contact",
-    "explore": "Explore"
+    "explore": "Our Projects"
   },
   "hero": {
-    "eyebrow": "EXPANDING THE FRONTIER",
-    "headline1": "WE EXPLORE",
-    "headline2": "WHAT'S NEXT.",
-    "description": "Advancing space science, engineering and exploration to expand humanity's understanding of the universe.",
-    "cta1": "Explore Missions",
-    "cta2": "Discover Our Work",
-    "scroll": "SCROLL TO EXPLORE"
+    "eyebrow": "SUDANESE NATIONAL COMMITTEE FOR SPACE",
+    "headline1": "SPACE FOR",
+    "headline2": "SUDAN'S FUTURE.",
+    "description": "SUNACS builds the national road map for space, adapting space technologies to serve Sudan's development, security and public services.",
+    "cta1": "Our Projects",
+    "cta2": "National Space Policy",
+    "scroll": "SCROLL TO EXPLORE",
+    "coordinates": "KHARTOUM · 15°30'N  32°33'E"
   },
-  "missionControl": {
-    "title": "MISSION CONTROL",
-    "activeMissions": "ACTIVE MISSIONS",
-    "satellitesInOrbit": "SATELLITES IN ORBIT",
-    "distanceTraveled": "DISTANCE TRAVELED",
-    "dataCollected": "DATA COLLECTED",
-    "activeMissionsValue": "07",
-    "satellitesValue": "24",
-    "distanceValue": "18.4B KM",
-    "dataValue": "4.8 PB",
-    "missionLabel": "MISSION",
-    "statusLabel": "STATUS",
-    "objectiveLabel": "OBJECTIVE",
-    "distanceLabel": "DISTANCE",
-    "missionName": "ARES-07",
-    "missionStatus": "IN ORBIT",
-    "missionObjective": "Deep-space observation",
-    "missionDistance": "1.84 AU",
-    "orbitalClass": "ORBITAL CLASS",
-    "orbitalClassValue": "L2",
-    "dataStatus": "DATA",
-    "dataStatusValue": "LIVE",
-    "statusNominal": "STATUS: NOMINAL"
+  "about": {
+    "label": "WHO WE ARE",
+    "title": "Our Objectives",
+    "subtitle": "The Sudanese National Committee for Space (SUNACS) leads Sudan's national space effort, from policy to satellites.",
+    "items": [
+      "Build a strong road map for the national space plan.",
+      "Adapt space technologies and capabilities to serve the country's programs.",
+      "Design, develop and implement space systems within the national space program.",
+      "Involve the domestic industry in the related fields of space technology.",
+      "Support and develop the country's activities.",
+      "Develop the space sector's research, development and manufacturing capabilities."
+    ],
+    "pillarsLabel": "POLICY PILLARS",
+    "pillarsTitle": "Three pillars guide every policy",
+    "pillars": [
+      "Economic Development Policies",
+      "Security Reinforcement Policies",
+      "Public Management and National Development"
+    ]
   },
-  "missions": {
-    "title": "MISSIONS",
-    "subtitle": "Exploring worlds beyond our own.",
-    "viewMission": "View Mission",
-    "statusCompleted": "COMPLETED",
-    "statusActive": "ACTIVE",
-    "statusPlanned": "PLANNED",
-    "items": {
-      "orion": {
-        "id": "MISSION 01",
-        "name": "ORION-01",
-        "destination": "Deep Space",
-        "year": "2022",
-        "description": "Deep-space observation mission utilizing advanced optical and infrared arrays to map uncharted regions beyond the heliosphere.",
-        "status": "COMPLETED"
+  "policies": {
+    "label": "SUDAN SPACE POLICIES",
+    "title": "National Space Policy",
+    "subtitle": "Seven policies set out how Sudan uses space to serve its people.",
+    "policy": "Policy",
+    "application": "Application",
+    "reason": "Reason for policy",
+    "statement": "Policy statement",
+    "items": [
+      {
+        "title": "Natural Resources Utilization by Space Applications",
+        "application": [
+          "Following agriculture projects",
+          "Annual crop production estimation",
+          "Oil and mining companies supervision",
+          "Pipelines monitoring",
+          "Weather forecasting"
+        ],
+        "reason": "To get the maximum benefit from local resources, new technologies are needed.",
+        "statement": "Sudan shall use space applications and activities to explore, manage and monitor its resources in order to use them effectively."
       },
-      "luna": {
-        "id": "MISSION 02",
-        "name": "LUNA-X",
-        "destination": "The Moon",
-        "year": "2024",
-        "description": "Comprehensive lunar exploration program conducting geological surveys and resource analysis of the lunar south pole.",
-        "status": "ACTIVE"
+      {
+        "title": "Achieve Prosperity, Improve Living Standards and Develop Public Services",
+        "application": [
+          "Monitoring cities expansion",
+          "Malaria fight project"
+        ],
+        "reason": "To use space projects to ease citizens' lives and monitor overall development.",
+        "statement": "Sudan shall make maximum use of space applications to promote good governance and improve public services."
       },
-      "aurora": {
-        "id": "MISSION 03",
-        "name": "AURORA",
-        "destination": "Earth Orbit",
-        "year": "2024",
-        "description": "Earth observation and climate research satellite constellation monitoring atmospheric composition and ocean currents.",
-        "status": "ACTIVE"
+      {
+        "title": "National Security and Development",
+        "application": [
+          "Border monitoring"
+        ],
+        "reason": "As a rich country, Sudan needs a way to secure its borders, territorial waters and lands.",
+        "statement": "Sudan shall focus on space applications that preserve and enhance the country's national security, to promote development that benefits its people."
       },
-      "titan": {
-        "id": "MISSION 04",
-        "name": "TITAN",
-        "destination": "Outer System",
-        "year": "2026",
-        "description": "Long-term outer solar system exploration concept targeting the moons of Saturn for signs of prebiotic chemistry.",
-        "status": "PLANNED"
+      {
+        "title": "Capacity Building in Space Industry and Applications",
+        "application": [],
+        "reason": "To sustain space projects in the country, a robust industry must be established to make and use space products and their derivatives.",
+        "statement": "Sudan will create a robust and active space industry and service provision to support the space program, through public-private partnership and cooperation."
+      },
+      {
+        "title": "Enhance International Cooperation and Partnerships",
+        "application": [],
+        "reason": "A developing country such as Sudan lacks the resources to develop its own space technology effectively, and will address this through cooperation and partnership with space-faring countries.",
+        "statement": "Sudan shall actively seek international partnerships and collaborations so that it becomes a relevant member of the global scientific space community, providing significant contributions and capabilities in space science and technology applications."
+      },
+      {
+        "title": "Space Research and Development",
+        "application": [],
+        "reason": "Derivative technologies from space research have been shown to benefit the advancement of society and a country's economy.",
+        "statement": "Sudan shall focus on research and development in vital areas of space science, technology and allied fields, producing published papers and patents that benefit the scientific field and society."
+      },
+      {
+        "title": "Space Education and Awareness",
+        "application": [],
+        "reason": "A significant number of local experts in the space industry is needed to sustain a space program.",
+        "statement": "Sudan shall establish a sustainable pool of scientists, engineers and communicators for the country's future space program, and increase public awareness of its value and benefits through programs with universities and colleges that teach space science and technology."
       }
+    ]
+  },
+  "program": {
+    "label": "NATIONAL SPACE PROGRAM",
+    "title": "A program built on the country's needs",
+    "items": [
+      {
+        "title": "Bottom line",
+        "intro": "The national space program shall serve the country's needs.",
+        "points": [
+          "The country's needs shall be identified first",
+          "Identify the needs that can be met, even partially, by space utilization",
+          "Develop space solutions for each identified need",
+          "Prioritize the space solutions"
+        ]
+      },
+      {
+        "title": "Space program shall be sustainable",
+        "intro": "To be able to answer the country's needs in the future.",
+        "points": [
+          "Be ready when needed"
+        ]
+      },
+      {
+        "title": "Framework to guarantee a sustainable program",
+        "intro": "A domestic space ecosystem for sustainability.",
+        "points": []
+      }
+    ]
+  },
+  "business": {
+    "label": "WHAT WE DO",
+    "title": "Business Areas",
+    "subtitle": "The fields in which SUNACS builds national capability.",
+    "items": [
+      "Design, development and implementation of space systems",
+      "Localization of satellite-related technology and knowledge",
+      "Development of industrial capabilities in the space field and establishment of research and development centers",
+      "Spreading scientific culture, awareness and advanced technical education",
+      "Providing satellite communication services"
+    ]
+  },
+  "projects": {
+    "label": "PROJECTS",
+    "title": "Our Projects",
+    "subtitle": "From the ground station in Sudan to Sudan's first remote sensing satellite in orbit.",
+    "ground": {
+      "tag": "PROJECT 01",
+      "title": "Ground Segment",
+      "desc": "Sudan's ground station for satellite control and data reception.",
+      "points": [
+        "High-precision antenna systems with a range of RF optics, including prime focus and Cassegrain",
+        "Frequency selective system (X & S band)",
+        "TT&C services and data receiving"
+      ],
+      "imageAlt": "SUNACS ground station antenna"
+    },
+    "susat": {
+      "tag": "PROJECT 02",
+      "title": "SuSat-1",
+      "name": "Sudan Remote Sensing Satellite",
+      "desc": "Sudan's first remote sensing satellite for investigating Sudanese territory and environment. SuSat-1 is an optical remote sensing micro-satellite.",
+      "objectivesTitle": "Main objectives",
+      "objectives": [
+        "Knowledge transfer and capacity building in the satellite industry",
+        "Provide satellite images serving several applications"
+      ],
+      "imageAlt": "The SuSat-1 satellite"
     }
+  },
+  "spacecraft": {
+    "label": "SUSAT-1 SPECIFICATIONS",
+    "title": "Sudan's eye in orbit",
+    "subtitle": "An optical remote sensing micro-satellite for investigating Sudanese territory and environment.",
+    "type": "TYPE",
+    "typeValue": "Optical micro-satellite",
+    "resolution": "GROUND RESOLUTION",
+    "resolutionValue": "5 m @ 500 km",
+    "swath": "SWATH WIDTH",
+    "swathValue": "20 km",
+    "mission": "MISSION",
+    "missionValue": "Remote sensing",
+    "photoTeam": "The SuSat-1 team",
+    "photoLaunch": "Launch",
+    "photoModel": "Satellite design"
+  },
+  "earth": {
+    "title1": "EYES ON",
+    "title2": "SUDAN.",
+    "description": "SuSat-1 serves Sudan with high-resolution optical remote sensing imaging, applied in:",
+    "applications": [
+      "National census",
+      "Crop estimation",
+      "Forest survey",
+      "Environmental protection",
+      "Disaster monitoring",
+      "Urban planning",
+      "Geo mapping"
+    ],
+    "cta": "View our projects",
+    "orbit": "SUSAT-1 · REMOTE SENSING",
+    "altitude": "ALTITUDE: 500 KM",
+    "coordinates": "SWATH: 20 KM"
+  },
+  "partners": {
+    "label": "INTERNATIONAL PARTNERSHIPS",
+    "title": "Our Partners",
+    "subtitle": "Cooperation with space-faring countries is at the heart of Sudan's space policy.",
+    "items": [
+      {
+        "name": "China National Space Administration",
+        "short": "CNSA",
+        "country": "China",
+        "logo": "cnsa"
+      },
+      {
+        "name": "China Academy of Space Technology",
+        "short": "CAST",
+        "country": "China",
+        "logo": "cast"
+      },
+      {
+        "name": "China Great Wall Industry Corporation",
+        "short": "CGWIC",
+        "country": "China",
+        "logo": "cgwic"
+      },
+      {
+        "name": "ROSCOSMOS",
+        "short": "ROSCOSMOS",
+        "country": "Russia",
+        "logo": "roscosmos"
+      },
+      {
+        "name": "Russian Space Systems",
+        "short": "RSS",
+        "country": "Russia",
+        "logo": "rss"
+      },
+      {
+        "name": "Kyushu Institute of Technology",
+        "short": "Kyutech",
+        "country": "Japan",
+        "logo": "kyutech"
+      },
+      {
+        "name": "Space-Tech Company",
+        "short": "Space-Tech",
+        "country": "China",
+        "logo": "spacetech"
+      },
+      {
+        "name": "Egyptian Space Agency",
+        "short": "EgSA",
+        "country": "Egypt",
+        "logo": "egsa"
+      },
+      {
+        "name": "Global Technical Solutions",
+        "short": "CGC",
+        "country": "United Kingdom",
+        "logo": "cgc"
+      }
+    ]
   },
   "solarSystem": {
     "title": "EXPLORE THE SOLAR SYSTEM",
@@ -101,186 +279,31 @@
     "gravity": "Gravity",
     "moons": "Moons",
     "atmosphere": "Atmosphere",
-    "missions": "Agency Missions",
-    "selectPlanet": "Select a planet to explore"
-  },
-  "technology": {
-    "title": "ENGINEERING THE IMPOSSIBLE",
-    "subtitle": "Pioneering technologies that redefine what humanity can achieve beyond Earth.",
-    "items": {
-      "propulsion": {
-        "title": "Propulsion Systems",
-        "description": "Next-generation ion drives and plasma propulsion enabling faster, more efficient deep-space travel."
-      },
-      "robotics": {
-        "title": "Advanced Robotics",
-        "description": "Autonomous robotic systems designed for extraterrestrial surface exploration and in-space assembly."
-      },
-      "ai": {
-        "title": "Artificial Intelligence",
-        "description": "Machine learning systems for real-time data analysis, mission planning, and autonomous decision-making."
-      },
-      "satellite": {
-        "title": "Satellite Systems",
-        "description": "Cutting-edge satellite platforms for Earth observation, communication, and deep-space relay networks."
-      },
-      "communication": {
-        "title": "Deep Space Communication",
-        "description": "Laser-optical and quantum communication systems maintaining contact across billions of kilometers."
-      },
-      "navigation": {
-        "title": "Autonomous Navigation",
-        "description": "Self-navigating spacecraft systems using star-tracking and AI-powered trajectory optimization."
-      }
-    }
-  },
-  "research": {
-    "title": "RESEARCH & DISCOVERY",
-    "subtitle": "Advancing the boundaries of human knowledge through rigorous scientific investigation.",
-    "learnMore": "Learn More",
-    "items": {
-      "astrophysics": {
-        "title": "Astrophysics",
-        "description": "Investigating the fundamental laws governing stars, galaxies, dark matter and the evolution of the cosmos."
-      },
-      "planetary": {
-        "title": "Planetary Science",
-        "description": "Studying the composition, geology and atmospheres of planets and moons across the solar system."
-      },
-      "earth": {
-        "title": "Earth Observation",
-        "description": "Monitoring our planet's climate, oceans and atmosphere from orbit to understand environmental change."
-      },
-      "biology": {
-        "title": "Space Biology",
-        "description": "Researching the effects of microgravity on biological systems and the potential for life beyond Earth."
-      },
-      "chemistry": {
-        "title": "Astrochemistry",
-        "description": "Analyzing the chemical processes occurring in interstellar space that may lead to the building blocks of life."
-      },
-      "autonomous": {
-        "title": "AI & Autonomous Systems",
-        "description": "Developing intelligent systems capable of independent operation in the extreme environments of space."
-      }
-    }
-  },
-  "spacecraft": {
-    "title": "BUILT FOR THE UNKNOWN",
-    "subtitle": "Our next-generation exploration vehicle, engineered for the deepest reaches of space.",
-    "propulsion": "PROPULSION",
-    "propulsionValue": "ION DRIVE",
-    "power": "POWER",
-    "powerValue": "SOLAR ARRAY",
-    "communication": "COMMUNICATION",
-    "communicationValue": "DEEP SPACE LINK",
-    "navigation": "NAVIGATION",
-    "navigationValue": "STAR TRACKER",
-    "shielding": "SHIELDING",
-    "shieldingValue": "COMPOSITE",
-    "payload": "PAYLOAD",
-    "payloadValue": "2,400 KG"
-  },
-  "earth": {
-    "title1": "OUR PLANET.",
-    "title2": "OUR RESPONSIBILITY.",
-    "description": "Satellite observation enables us to better understand climate, oceans, atmosphere and the changing planet. Our constellation of Earth-monitoring satellites provides critical data for environmental science and climate policy.",
-    "cta": "EXPLORE EARTH DATA",
-    "coordinates": "34°12'08\"N  118°14'37\"W",
-    "altitude": "ALTITUDE: 408 KM",
-    "orbit": "LOW EARTH ORBIT"
-  },
-  "news": {
-    "title": "FROM THE AGENCY",
-    "subtitle": "Latest developments, discoveries, and announcements from our missions and programs.",
-    "readMore": "Read More",
-    "items": {
-      "telescope": {
-        "date": "Sep 15, 2026",
-        "category": "Technology",
-        "title": "New Deep-Space Telescope Completes Calibration",
-        "description": "The agency's next-generation deep-space telescope has successfully completed its calibration phase, delivering images of unprecedented clarity from the L2 Lagrange point."
-      },
-      "lunar": {
-        "date": "Sep 08, 2026",
-        "category": "Exploration",
-        "title": "Agency Announces Lunar Exploration Program",
-        "description": "A comprehensive new lunar exploration initiative will deploy autonomous rovers and establish a permanent research station at the lunar south pole by 2028."
-      },
-      "navigation": {
-        "date": "Aug 28, 2026",
-        "category": "Research",
-        "title": "New Autonomous Navigation System Tested",
-        "description": "The autonomous navigation system for deep-space missions passed critical tests, demonstrating the ability to independently navigate through complex gravitational fields."
-      },
-      "satellite": {
-        "date": "Aug 20, 2026",
-        "category": "Earth Science",
-        "title": "Satellite Captures New Atmospheric Data",
-        "description": "The AURORA satellite constellation has captured detailed new data on upper atmospheric dynamics, providing insights into climate change acceleration patterns."
-      }
-    }
-  },
-  "impact": {
-    "missions": "MISSIONS",
-    "missionsValue": "25+",
-    "years": "YEARS OF EXPLORATION",
-    "yearsValue": "18",
-    "spacecraft": "SPACECRAFT",
-    "spacecraftValue": "42",
-    "research": "RESEARCH PROJECTS",
-    "researchValue": "120+"
-  },
-  "timeline": {
-    "title": "OUR JOURNEY",
-    "subtitle": "Key milestones in our ongoing quest to explore the cosmos.",
-    "items": {
-      "2008": {
-        "year": "2008",
-        "title": "Agency Founded",
-        "description": "Established with a mandate to advance space science, engineering and exploration for the benefit of all humanity."
-      },
-      "2012": {
-        "year": "2012",
-        "title": "First Satellite Launched",
-        "description": "Successfully placed our first Earth observation satellite into low orbit, beginning our operational space program."
-      },
-      "2016": {
-        "year": "2016",
-        "title": "Deep-Space Program Begins",
-        "description": "Initiated the deep-space research program with development of advanced propulsion and communication systems."
-      },
-      "2020": {
-        "year": "2020",
-        "title": "Autonomous Spacecraft",
-        "description": "Introduced AI-powered autonomous spacecraft technology, enabling missions beyond the range of real-time communication."
-      },
-      "2024": {
-        "year": "2024",
-        "title": "Lunar Exploration Begins",
-        "description": "Launched the LUNA-X mission, deploying rovers and instruments to explore the lunar south pole region."
-      },
-      "2026": {
-        "year": "2026",
-        "title": "Next Generation",
-        "description": "Beginning our most ambitious exploration program yet, with missions targeting the outer solar system and beyond."
-      }
-    }
+    "missions": "Notable missions",
+    "selectPlanet": "Select a planet to explore",
+    "label": "EDUCATIONAL · OUR COSMIC NEIGHBORHOOD"
   },
   "cta": {
-    "headline1": "THE UNIVERSE",
-    "headline2": "IS WAITING.",
-    "description": "Join us as we explore the unknown and build the technologies that will define tomorrow.",
-    "cta1": "Explore Missions",
-    "cta2": "Contact Agency"
+    "label": "GET IN TOUCH",
+    "headline1": "LET'S BUILD",
+    "headline2": "SUDAN'S SPACE FUTURE.",
+    "description": "Contact the Sudanese National Committee for Space about partnerships, projects and space applications.",
+    "addressLabel": "Address",
+    "address": "Kafori, Khartoum – Sudan · P.O. Box 1646",
+    "emailLabel": "Email",
+    "email": "info@sunacs.gov.sd",
+    "cta1": "Email us",
+    "cta2": "Our Projects"
   },
   "footer": {
-    "description": "Advancing space science, engineering and exploration to expand humanity's understanding of the universe.",
+    "description": "The Sudanese National Committee for Space (SUNACS) leads Sudan's national space policy, programs and international partnerships.",
     "explore": "Explore",
-    "social": "Social",
     "contact": "Contact",
-    "email": "contact@spaceagency.org",
-    "copyright": "© 2026 Space Agency",
-    "tagline": "Exploring beyond boundaries."
+    "address": "Kafori, Khartoum – Sudan",
+    "pobox": "P.O. Box 1646",
+    "email": "info@sunacs.gov.sd",
+    "copyright": "© 2026 Sudanese National Committee for Space (SUNACS)",
+    "tagline": "Space for Sudan's development.",
+    "location": "KHARTOUM · 15°30'N 32°33'E"
   }
 }

@@ -21,14 +21,14 @@ export default function News() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
+          className="mb-8 sm:mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-6"
         >
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Newspaper size={16} className="text-space-blue" />
               <span className="technical-label text-space-blue">DISPATCHES & ANNOUNCEMENTS</span>
             </div>
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight">
               {t('title')}
             </h2>
           </div>
@@ -38,7 +38,7 @@ export default function News() {
         </motion.div>
 
         {/* News Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
           {articles.map((item, idx) => {
             const date = t(`items.${item}.date`);
             const category = t(`items.${item}.category`);
@@ -51,12 +51,12 @@ export default function News() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                transition={{ duration: 0.55, delay: (idx % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -4 }}
-                className="group relative rounded-xl border border-white/5 bg-space-navy/20 p-8 sm:p-10 backdrop-blur-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-space-blue/30 hover:bg-space-navy/40"
+                className="group relative rounded-2xl card-surface p-5 sm:p-8 overflow-hidden flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center gap-4 text-xs font-mono text-space-gray mb-4">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-space-gray mb-3 sm:mb-4">
                     <span className="flex items-center gap-1.5">
                       <Calendar size={13} className="text-space-blue" />
                       {date}
@@ -68,11 +68,11 @@ export default function News() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-4 text-space-white group-hover:text-space-blue transition-colors">
+                  <h3 className="font-heading text-xl sm:text-3xl font-bold mb-2 sm:mb-4 text-space-white group-hover:text-space-electric transition-colors">
                     {title}
                   </h3>
 
-                  <p className="text-space-gray text-sm sm:text-base leading-relaxed mb-8">
+                  <p className="text-space-gray text-sm sm:text-base leading-relaxed mb-5 sm:mb-8">
                     {desc}
                   </p>
                 </div>

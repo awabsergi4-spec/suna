@@ -14,10 +14,10 @@ export default function Missions() {
     {
       key: 'orion',
       color: 'from-blue-900/30 to-indigo-950/20',
-      accent: '#3B82F6',
+      accent: '#6B6FD4',
       icon: CheckCircle2,
       badgeClass: 'text-blue-400 border-blue-500/20 bg-blue-500/10',
-      glow: 'rgba(59, 130, 246, 0.15)',
+      glow: 'rgba(107,111,212, 0.15)',
     },
     {
       key: 'luna',
@@ -25,7 +25,7 @@ export default function Missions() {
       accent: '#06B6D4',
       icon: Radio,
       badgeClass: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/10',
-      glow: 'rgba(6, 182, 212, 0.15)',
+      glow: 'rgba(244,151,142, 0.15)',
     },
     {
       key: 'aurora',
@@ -54,14 +54,14 @@ export default function Missions() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6"
+          className="mb-8 sm:mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-6"
         >
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Compass size={16} className="text-space-blue" />
               <span className="technical-label text-space-blue">EXPLORATION INITIATIVES</span>
             </div>
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight">
               {t('title')}
             </h2>
           </div>
@@ -71,7 +71,7 @@ export default function Missions() {
         </motion.div>
 
         {/* Mission Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {missionsList.map((item, idx) => {
             const data = {
               id: t(`items.${item.key}.id`),
@@ -89,9 +89,9 @@ export default function Missions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: idx * 0.12 }}
-                whileHover={{ y: -6 }}
-                className="group relative rounded-xl border border-white/5 bg-space-navy/40 p-8 sm:p-10 backdrop-blur-md overflow-hidden transition-all duration-500 hover:border-space-blue/30"
+                transition={{ duration: 0.6, delay: (idx % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -4 }}
+                className="group relative rounded-2xl card-surface p-5 sm:p-8 overflow-hidden"
               >
                 {/* Background atmospheric gradient */}
                 <div
@@ -114,10 +114,10 @@ export default function Missions() {
                   </svg>
                 </div>
 
-                <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                <div className="relative z-10 flex flex-col h-full justify-between gap-5 sm:gap-8">
                   {/* Top metadata */}
                   <div>
-                    <div className="flex items-center justify-between gap-4 mb-6">
+                    <div className="flex items-center justify-between gap-3 mb-4 sm:mb-6">
                       <span className="technical-label text-space-gray">
                         {data.id} &bull; {data.year}
                       </span>
@@ -129,11 +129,11 @@ export default function Missions() {
                       </span>
                     </div>
 
-                    <h3 className="font-heading text-3xl sm:text-4xl font-bold mb-3 tracking-wide text-space-white group-hover:text-white transition-colors">
+                    <h3 className="font-heading text-2xl sm:text-4xl font-bold mb-2 sm:mb-3 tracking-wide text-space-white group-hover:text-white transition-colors">
                       {data.name}
                     </h3>
 
-                    <div className="inline-block mb-4 text-xs font-mono uppercase tracking-widest text-space-blue">
+                    <div className="inline-block mb-3 sm:mb-4 text-xs font-mono uppercase tracking-widest text-space-blue">
                       &rarr; {data.destination}
                     </div>
 

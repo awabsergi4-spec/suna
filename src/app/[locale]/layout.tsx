@@ -1,18 +1,26 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/navigation/Navbar';
 import Footer from '@/components/sections/Footer';
 import SpaceBackground from '@/components/space/SpaceBackground';
 import CustomCursor from '@/components/ui/CustomCursor';
-import LoadingScreen from '@/components/ui/LoadingScreen';
 import '../globals.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#030508',
+};
+
+const FONTS_URL =
+  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap';
 
 export async function generateMetadata({
   params,
@@ -20,15 +28,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isAr = locale === 'ar';
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
-    title: isAr
-      ? 'وكالة الفضاء — نستكشف ما وراء الحدود'
-      : 'Space Agency — Exploring Beyond Boundaries',
-    description: isAr
-      ? 'نستكشف الفضاء من خلال العلم والهندسة والابتكار.'
-      : 'Exploring space through science, engineering and innovation.',
+    title: t('title'),
+    description: t('description'),
+    icons: { icon: '/icon.png', apple: '/icon.png' },
     alternates: {
       languages: {
         en: '/en',
@@ -36,12 +41,9 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: isAr
-        ? 'وكالة الفضاء — نستكشف ما وراء الحدود'
-        : 'Space Agency — Exploring Beyond Boundaries',
-      description: isAr
-        ? 'نستكشف الفضاء من خلال العلم والهندسة والابتكار.'
-        : 'Exploring space through science, engineering and innovation.',
+      title: t('title'),
+      description: t('description'),
+      images: ['/logo.png'],
       type: 'website',
     },
   };
@@ -66,9 +68,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={dir}>
-      <body className="bg-space-black text-space-white relative min-h-screen selection:bg-space-blue selection:text-white">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href={FONTS_URL} />
+        <link rel="preload" as="image" href="/logo-light.webp" />
+      </head>
+      <body className="bg-space-black text-space-white relative min-h-screen selection:bg-space-blue/40 selection:text-white">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <LoadingScreen />
           <CustomCursor />
           <SpaceBackground />
           <Navbar />

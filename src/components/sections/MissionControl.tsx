@@ -63,10 +63,10 @@ export default function MissionControl() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-subtle p-4 sm:p-6 rounded-xl"
+              className="card-surface p-4 sm:p-6 rounded-2xl"
             >
               <p className="technical-label text-space-gray mb-1.5 text-[0.6rem] truncate">{stat.label}</p>
-              <p className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-space-white" style={{ animation: 'counter-pulse 4s ease-in-out infinite' }}>
+              <p className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-space-white" >
                 {stat.value !== null ? (
                   <AnimatedCounter end={stat.value} />
                 ) : (
@@ -86,11 +86,11 @@ export default function MissionControl() {
           className="glass-subtle p-5 sm:p-8 md:p-12 rounded-2xl relative overflow-hidden"
         >
           {/* Decorative orbital */}
-          <div className="absolute top-0 end-0 w-80 h-80 pointer-events-none opacity-20" aria-hidden="true">
+          <div className="absolute -top-10 -end-10 w-56 h-56 sm:w-80 sm:h-80 pointer-events-none opacity-20" aria-hidden="true">
             <svg viewBox="0 0 320 320" className="w-full h-full">
-              <circle cx="160" cy="160" r="100" fill="none" stroke="rgba(59,130,246,0.2)" strokeWidth="1" strokeDasharray="4 6" />
-              <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(59,130,246,0.1)" strokeWidth="1" strokeDasharray="3 8" />
-              <circle cx="260" cy="160" r="4" fill="rgba(59,130,246,0.6)">
+              <circle cx="160" cy="160" r="100" fill="none" stroke="rgba(107,111,212,0.2)" strokeWidth="1" strokeDasharray="4 6" />
+              <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(107,111,212,0.1)" strokeWidth="1" strokeDasharray="3 8" />
+              <circle cx="260" cy="160" r="4" fill="rgba(107,111,212,0.6)">
                 <animateTransform attributeName="transform" type="rotate" from="0 160 160" to="360 160 160" dur="20s" repeatCount="indefinite" />
               </circle>
             </svg>
@@ -113,7 +113,7 @@ export default function MissionControl() {
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="technical-label text-space-gray w-24 shrink-0">{t('objectiveLabel')}</span>
+                  <span className="technical-label text-space-gray w-20 sm:w-24 shrink-0">{t('objectiveLabel')}</span>
                   <span className="text-space-white text-sm">{t('missionObjective')}</span>
                 </div>
                 <div className="flex items-center gap-3">
